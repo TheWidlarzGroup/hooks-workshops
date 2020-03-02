@@ -29,6 +29,10 @@ import {
 } from "spectacle";
 import createTheme from "spectacle/lib/themes/default";
 
+import Codete from "./assets/codete.jpg";
+import TWG from "./assets/twg-logo.png";
+import DM from "./assets/dm-logo.png";
+
 const theme = createTheme({
   primary: "#302b4e",
   text: "#fff"
@@ -117,36 +121,88 @@ function App() {
     <Deck transition={["zoom", "slide"]} theme={theme} transitionDuration={500}>
       <Slide transition={["zoom"]} bgColor="primary">
         <Heading size={1} fit caps lineHeight={1} textColor="white">
-          🔥 React Hooks Workshops🔥
+          🔥 React Hooks Workshops 🔥
         </Heading>
-        <Heading size={1} fit caps textColor="white">
-          Where You Can Write Your Decks In JSX
-        </Heading>
-        <Link href="https://github.com/FormidableLabs/spectacle">
-          <Text bold caps textColor="tertiary">
-            View on Github
-          </Text>
-        </Link>
-        <Text textSize="1.5em" margin="20px 0px 0px" bold>
-          Hit Your Right Arrow To Begin!
-        </Text>
       </Slide>
       <Slide
-        id="wait-what"
+        id="companies"
         transition={["slide"]}
-        bgColor="black"
+        bgColor="primary"
         notes="You can even put notes on your slide. How awesome is that?"
       >
-        <Image
-          src={
-            "https://github.com/FormidableLabs/spectacle/raw/master/example/assets/kat.png"
-          }
-          margin="0px auto 40px"
-          height="293px"
-        />
-        <Heading size={2} caps fit textColor="primary" textFont="primary">
-          Wait what?
-        </Heading>
+        <Appear fid="1">
+          <Image src={Codete} margin="0px auto 40px" height="150px" />
+        </Appear>
+        <Appear fid="2">
+          <Image src={TWG} margin="0px auto 40px" height="200px" />
+        </Appear>
+        <Appear fid="3">
+          <Image src={DM} margin="0px auto 40px" height="150px" />
+        </Appear>
+        {/* <Heading size={2} caps fit textColor="white" textFont="primary">
+          Cooperation of three entities
+        </Heading> */}
+      </Slide>
+      <Slide
+        id="about-host"
+        bgColor="primary"
+        notes="<ul><li>talk about that</li><li>and that</li></ul>"
+      >
+        <Layout>
+          <Fill>
+            <Heading size={6} caps textColor="white" margin={10}>
+              Bart Widlarz
+            </Heading>
+          </Fill>
+          <Fill>
+            <Image src={TWG} margin="0px auto 40px" height="100px" />
+          </Fill>
+        </Layout>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+            JavaScript
+          </Heading>
+        </Appear>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+            TypeScript
+          </Heading>
+        </Appear>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+            Kotlin
+          </Heading>
+        </Appear>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+            Swift
+          </Heading>
+        </Appear>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+            Java
+          </Heading>
+        </Appear>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+            Elixir
+          </Heading>
+        </Appear>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+          TypeScript
+          </Heading>
+        </Appear>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+           JavaScript
+          </Heading>
+        </Appear>
+        <Appear fid="1">
+          <Heading size={6} caps textColor="white" margin={10}>
+           ...
+          </Heading>
+        </Appear>
       </Slide>
       <Slide
         transition={["zoom", "fade"]}
